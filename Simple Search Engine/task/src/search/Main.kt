@@ -27,7 +27,6 @@ fun askMenu() : Int {
 }
 
 fun List<String>.search(phrase: List<String>, strategy: String): String {
-
     val hitList = when (strategy) {
         "all" -> { this.map { it.split(" ") }.filter { it.all { s -> s.lowercase() in phrase } } }
         "any" -> { this.map { it.split(" ") }.filter { it.any { s -> s.lowercase() in phrase } } }
